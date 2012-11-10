@@ -10,6 +10,10 @@ h2. "Repos":http://github.com/{{ site.author.github }}
 
 {% if BASE_PATH %}* "{{ BASE_PATH }}":http://github.com/{{ site.author.github }}{{ BASE_PATH }}{% endif %}
 * ...
+
+h2. "gist":http://gist.github.com/{{ site.author.github }}
+
+* ...
 {% endif %}
 
 
