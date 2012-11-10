@@ -1,0 +1,26 @@
+<div class="day">
+  <!-- div class="body" -->
+
+    <!-- div class="section" -->
+{{ content }}
+    <!-- /div -->
+
+    <div class="refererlist">
+      <p class="date"><span class="caption">Last modified: </span><span class="timestamp">{{ page.date | date: "%Y-%m-%d %H:%M" }}</span></p>
+      <p class="tags">
+      <span class="caption">Tag(s):</span>
+      {% unless page.tags == empty %}
+        <ul class="commentshort">
+        {% assign tags_list = page.tags %}
+        {% include JB/tags_list %}
+        </ul>
+      {% endunless %}
+      </p>
+    </div>
+
+    <div class="comment">
+      {% include JB/comments %}
+    </div>
+
+  <!-- /div -->
+</div>

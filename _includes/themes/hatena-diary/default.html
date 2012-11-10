@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja-JP">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript; charset=UTF-8" />
+  <meta http-equiv="content-style-type" content="text/css" />
+
+  <title>{{ site.title }}{% if page.title %} / {{ page.title }} {% endif %}</title>
+  {% if page.description %}<meta name="description" content="{{ page.description : strip_newlines }}" />{% endif %}
+  <meta name="author" content="{{ site.author.name }}" />
+
+  <link rel="stylesheet" href="{{ ASSET_PATH }}/theme/base.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="{{ ASSET_PATH }}/theme/{{page.theme.style}}/{{page.theme.style}}.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="{{ ASSET_PATH }}/extra.css" type="text/css" />
+
+  <link href="/atom.xml" rel="alternate" title="atom" type="application/atom+xml" />
+</head>
+<body>
+<div class="whole-content">
+
+
+<div class="adminmenu">
+  <ul class="nav">
+    <li><a href="/">Top</a></li>
+    {% assign pages_list = site.pages %}
+    {% assign group = 'navigation' %}
+    {% include JB/pages_list %}
+  </ul>
+</div>
+
+
+<div class="content">
+
+  <h1>{% if page.style == "diary" %}{{ site.title }}{% elsif page.title %}{{ page.title }}{% endif %}</h1>
+
+  <div class="hatena-body">
+    <div class="main">
+      <div id="days">
+{{ content }}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+{% comment %}<!--
+<div class="sidebar">
+  <div class="sidebar-item">...</div>
+</div>
+-->{% endcomment %}
+
+
+<div class="footer">
+  <p>&copy; {{ site.author.name }} 2012 
+    with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+    and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+    + <a href="http://www.tdiary.org/">tDiary</a>
+    + <a href="http://d.hatena.ne.jp/">Hatena Diary</a>
+  </p>
+</div>
+
+</div> <!-- /container -->
+
+
+{% include JB/analytics %}
+
+
+</div>
+</body>
+</html>
