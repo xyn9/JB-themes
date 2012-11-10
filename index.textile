@@ -5,7 +5,12 @@ title: index
 <p class="date"><span class="caption">Last modified: </span><span class="timestamp">{{ site.time | date: "%Y-%m-%d %H:%M %Z" }}</span></p>
 
 
-h2. Repos
+{% if site.author.github %}
+h2. "Repos":http://github.com/{{ site.author.github }}
+
+{% if BASE_PATH %}* "{{ BASE_PATH }}":http://github.com/{{ site.author.github }}{{ BASE_PATH }}{% endif %}
+* ...
+{% endif %}
 
 
 
