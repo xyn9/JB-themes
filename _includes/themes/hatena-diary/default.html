@@ -26,6 +26,7 @@
     {% assign group = 'navigation' %}
     {% include JB/pages_list %}
     {% if site.author.github %}<li><a href="http://github.com/{{ site.author.github }}{{ BASE_PATH }}">Repository</a></li>{% endif %}
+    {% if site.author.twitter %}<li><a href="http://twitter.com/{{ site.author.twitter }}{{ BASE_PATH }}">@{{ site.author.twitter }}</a></li>{% endif %}
   </ul>
 </div>
 
