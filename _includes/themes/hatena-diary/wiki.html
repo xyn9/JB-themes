@@ -6,7 +6,7 @@
     <!-- /div -->
 
     <div class="refererlist">
-      <p class="date"><span class="caption">Last modified: </span><span class="timestamp">{{ page.date | date: "%Y-%m-%d %H:%M" }}</span></p>
+      <p class="date"><span class="caption">Last modified: </span><span class="timestamp">{{ page.mdate | date: "%Y-%m-%d %H:%M" }}</span></p>
       <p class="tags">
       <span class="caption">Tag(s):</span>
       {% unless page.tags == empty %}
