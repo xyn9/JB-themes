@@ -10,9 +10,9 @@ title : RSS Feed
  <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
  {% for post in site.posts %}
  <item>
-   <title>{{ post.category }}: {{ post.title }}</title>
+   <title>{{ post.category | xml_escape }}: {{ post.title | xml_escape }}</title>
    <link href="{% if post.link %}{{ site.production_url }}/{{ post.link }}{% else %}{{ post.url }}{% endif %}" />
-   <description>{{ post.content | strip_html }}</description>
+   <description>{{ post.content | strip_html | xml_escape }}</description>
    <content type="html">{{ post.content | xml_escape }}</content>
    <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
    <guid>{{ post.date | date:"%Y%m%d" }}{{ post.id }}</guid>
