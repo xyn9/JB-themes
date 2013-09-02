@@ -4,11 +4,11 @@
 </div>
 
 <div class="day autopagerize_page_element">
-  <h2><span class="date">{{page.date | date: site.theme.date_format }}</span><span class="title"></span></h2>
+  <h2><span class="date">{{ page.date | date: site.theme.date_format }}</span><span class="title"></span></h2>
   <div class="body">
 
     <div class="section">
-      <h3 class="title"><a href="{{page.url}}" name="{{page.title}}">{{page.title}}</a></h3>
+      <h3 class="title"><a href="{{ page.url }}" name="{{ page.title }}">{{page.title}}</a></h3>
       <p class="sectionheader">
         <ul class="sectioncategory">
         {% unless page.tags == empty %}
