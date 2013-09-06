@@ -128,8 +128,8 @@ JB :
   #
   #
   # ------------------------------------------------------------
-  posts_collate :
-    provider : "custom"
+#   posts_collate :
+#     provider : "custom"
     
   #
 
