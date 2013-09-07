@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="{{ page.redirect.delay }};url={{ page.redirect.url }}">
+<title> {{ page.title }} </title>
+</head>
+<frameset cols="100%" frameborder=0 framespacing=0 border=0 scrolling="auto" noresize>
+<frame name="{{ page.title }}" src="{{ page.redirect.url }}" border=0 marginwidth=0 marginheight=0 frameborder=0 framespacing=0 noresize>
+</frameset>
+<noframe>
+<body>
+<a href="{{ page.redirect.url }}">{{ page.redirect.url }}</a>
+
+
+{{ content }}
+
+
+</body>
+</noframe>
+</html>

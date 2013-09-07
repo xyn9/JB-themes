@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>gist#{{ page.id }}{% if page.title %} - {{ page.title }} {% endif %}</title>
+<link rel="stylesheet" href="/css/gist.css">
+</head>
+<noframe>
+<body>
+
+
+<div id="main">
+
+
+<h1><a href="https://gist.github.com/{{ page.id }}">gist#{{ page.id }}</a>
+{% if page.title %} / {{ page.title }} {% endif %}</h1>
+
+
+{{ content }}
+
+
+<div class="main">
+<script src="https://gist.github.com/{{ page.id }}.js"></script>
+</div>
+
+</div>
+
+
+</body>
+</noframe>
+</html>
