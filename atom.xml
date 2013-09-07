@@ -19,7 +19,7 @@ title : Atom Feed
  <entry>
    <title>{{ post.category | xml_escape }}: {{ post.title | xml_escape }}</title>
    <link href="{{ site.production_url }}/{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}" />
-   <description>{% if post.mdescription %}{{ post.mdescription | strip_html | xml_escape }}{% else %}{{ post.content | strip_html | xml_escape }}{% endif %}</description>
+   <description>{{ post.content | strip_html | xml_escape }}</description>
    <content type="html">{{ post.content | xml_escape }}</content>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ post.id }}@{{ post.date | date:"%c" }}</id>
