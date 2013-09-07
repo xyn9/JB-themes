@@ -16,9 +16,9 @@ title : RSS Feed
 
  {% for post in site.posts %}
    <item>
-   <title>{{ post.category | xml_escape }}: {{ post.title | xml_escape }}</title>
+   <title>{{ site.title | xml_escape }}: {{ post.title | xml_escape }}</title>
    <link>{{ site.production_url }}/{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}</link>
-   <description>{% if post.mdescription %}{{ post.mdescription | strip_html }}{% else %}{{ post.content | strip_html }}{% endif %}</description>
+   <description>{% if post.mdescription %}{{ post.mdescription | strip_html | xml_escape }}{% else %}{{ post.content | strip_html | xml_escape }}{% endif %}</description>
    <content type="html">{{ post.content | xml_escape }}</content>
    <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
    <guid>{{ post.id }}@{{ post.date | date:"%c" }}</guid>
