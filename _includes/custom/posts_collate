@@ -32,7 +32,7 @@ Usage:
   
         <li>
         <span>{{ post.date | date: site.theme.date_format }}</span>
-        <a href="{{ BASE_PATH }}{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
+        <a href="{{ BASE_PATH }}{% if post.link %}/{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
         {% if post.mdescription %}<pre>{{ post.mdescription }}</pre>{% endif %}
         </li>
   
