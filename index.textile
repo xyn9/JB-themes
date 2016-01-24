@@ -5,16 +5,11 @@ title: index
 p(date). %(caption)Last modified:% %(timestamp){{ site.time | date: "%Y-%m-%d %H:%M %Z" }}%
 
 
-{% if site.author.github %}
-h2. "Repos":http://github.com/{{ site.author.github }}
+h2. "repos":{{ site.github.owner_url }}
+{% for repos in site.github.public_repositories %}* "{{ repos.name }}":{{ repos.html_url }}
+{% endfor %}
 
-{% if site.JB.BASE_PATH %}* "{{ site.JB.BASE_PATH }}":http://github.com/{{ site.author.github }}{{ site.JB.BASE_PATH }}{% endif %}
-* ...
-
-h2. "gist":http://gist.github.com/{{ site.author.github }}
-
-* ...
-{% endif %}
+h2. "gist":http://gist.github.com/{{ site.github.owner_name }}
 
 
 
