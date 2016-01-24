@@ -5,6 +5,11 @@ title: index
 p(date). %(caption)Last modified:% %(timestamp){{ site.time | date: "%Y-%m-%d %H:%M %Z" }}%
 
 
+h2. updates
+{% for tag in site.github.releases %}* "{{ tag.name }}":{{ tag.html_url }} - {{ tag.body }}
+{% endfor %}
+
+
 h2. "repos":{{ site.github.owner_url }}
 {% for repos in site.github.public_repositories %}* "{{ repos.name }}":{{ repos.html_url }}
 {% endfor %}
